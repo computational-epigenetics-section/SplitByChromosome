@@ -37,7 +37,6 @@ else:
                    "20", "21", "22", "X", "Y"]
 
 
-
 # Get the input file from the command line
 input_bam = args.input_bam
 file_name = input_bam.split('.')[0]
