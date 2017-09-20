@@ -16,15 +16,14 @@
 #
 ####################################
 
-import sys
 import subprocess
 import time
 import sys
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--chr", help="Set if input bam has chromosome IDs beginning with 'chr'", action="set_true")
-parser.add_argument("input_bam", "Input bam file to split")
+parser.add_argument("input_bam", help="Input bam file to split")
+parser.add_argument("--chr", help="Set if input bam has chromosome IDs beginning with 'chr'", action="store_true")
 
 args = parser.parse_args()
 
@@ -38,8 +37,6 @@ else:
                    "20", "21", "22", "X", "Y"]
 
 
-
-# test = ["20", "21"]  # Use this for testing small scale
 
 # Get the input file from the command line
 input_bam = args.input_bam
