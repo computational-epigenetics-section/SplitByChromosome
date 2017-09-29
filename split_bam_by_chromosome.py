@@ -10,7 +10,7 @@
 # best to execute this as a batch script on the bynode queue
 # as it should use all of the available cores.
 #
-# Usage: "python3 split_by_chromosome.py input.bam"
+# Usage: "python3 split_by_chromosome.py [-h] [--chr] input.bam"
 #   Input bam must be coordinate sorted and have a .bai index file
 # But consider starting this with an sbatch job script
 #
@@ -22,7 +22,7 @@ import sys
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("input_bam", help="Input bam file to split")
+parser.add_argument("input_bam", help="Input bam file to split, file must have index present")
 parser.add_argument("--chr", help="Set if input bam has chromosome IDs beginning with 'chr'", action="store_true")
 
 args = parser.parse_args()
