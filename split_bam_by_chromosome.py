@@ -14,6 +14,8 @@
 #   Input bam must be coordinate sorted and have a .bai index file
 # But consider starting this with an sbatch job script
 #
+# Samtools must be installed and present on the PATH
+#
 ####################################
 
 import subprocess
