@@ -1,7 +1,7 @@
 ####################################
 #
 # Created by Anthony Scott
-# Aug 9, 2017
+# Sep 9, 2017
 #
 # This python script spawns multiple processes
 # of samtools to split a bam file by chromosome in parallel.
