@@ -51,7 +51,7 @@ procs = []
 # Start splitting every chromosome simultaneously
 for chromosome in chromosomes:  # Make sure this is set for testing or production
     if args.chr:
-        output_bam = file_name + chromosome + ".bam"
+        output_bam = file_name + '.' + chromosome + ".bam"
     else:
         output_bam = file_name + '.chr' + chromosome + ".bam"
 
