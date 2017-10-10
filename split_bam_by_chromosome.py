@@ -50,7 +50,11 @@ procs = []
 
 # Start splitting every chromosome simultaneously
 for chromosome in chromosomes:  # Make sure this is set for testing or production
-    output_bam = file_name + '.chr' + chromosome + ".bam"
+    if args.chr:
+        output_bam = file_name + chromosome + ".bam"
+    else:
+        output_bam = file_name + '.chr' + chromosome + ".bam"
+
     command = "samtools view -b %s %s > %s" % (input_bam, chromosome, output_bam)
     print("Command is: " + command)
     print("Output file is %s" % output_bam)
